@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = [];
+        for (let i = 0; i < 100; i++) {
+            num[i] = Math.floor(Math.random() * 101);
+        }
+        findMin(num);
+        findMax(num);
+        function findMin(array) {
+            let min = array[0];
+            for (let i = 1; i < array.length; i++) {
+                if (min > array[i]) {
+                    min = array[i];
+                }
+            }
+            console.log("smallest number is: " + min);
+        }
+        function findMax(array) {
+            let max = array[0];
+            for (let i = 1; i < array.length; i++) {
+                if (max < array[i]) {
+                    max = array[i];
+                }
+            }
+            console.log("largest number is: " + max);
+        }
+
+    </script>
+</body>
+</html>
